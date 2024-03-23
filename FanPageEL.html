@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Da Vinci Fan Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #616e7c;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #172933;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        color: #9aa5b1;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px 30px;
+
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+        text-decoration: underline;
+        background-color: #52606d;
+    }
+
+    .leo {
+        max-width: 200px;
+        height: auto;
+        padding: 40px;
+        border-radius: 50%;
+        padding-left: 100px;
+    }
+
+    .headleo {
+        margin-right: 80px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        color: #18191a;
+        ;
+        white-space: nowrap;
+    }
+
+    .quotes {
+        font-size: large;
+        font-weight: 700;
+        padding-top: 20px;
+        color: #18191a;
+    }
+
+    .quotes p {
+        font-size: 25px;
+    }
+
+    .agc {
+        text-align: center;
+    }
+
+    .bsection {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    #gallery .painting {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    #gallery .painting img {
+        max-width: 400px;
+        height: auto;
+        padding: 40px;
+        border-radius: 20%;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    #gallery .painting .number {
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+
+    }
+
+    #gallery .painting .descrip {
+        font-weight: 400;
+        color: #18191a;
+        font-size: larger;
+    }
+
+    #gallery .painting .painting-name {
+        position: absolute;
+        top: 1px;
+        left: 20%;
+        transform: translateX(-50%);
+        color: #04040c;
+        z-index: 10;
+
+    }
+
+    h2 {
+        font-family: Courier, monospace;
+        font-size: 2em;
+        text-align: center;
+        border-top: 2px solid black;
+        padding-top: 20px;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Satisfy);
+    @import url(https://fonts.googleapis.com/css?family=Six+Caps);
+
+    body {
+        background: url(http://api.thumbr.it/whitenoise-361x370.png?background=15424fff&noise=166f9e&density=100&opacity=61);
+        text-align: center;
+    }
+
+    .info {
+        border-top: 5px solid #000;
+    }
+
+    .halo {
+        background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.6));
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+    }
+
+    .intro {
+        color: rgb(230, 200, 160);
+        display: block;
+        font-family: 'Satisfy', cursive;
+        font-size: 32px;
+        text-shadow: 1px 1px black;
+        transform: rotate(-10deg);
+    }
+
+    .--pre {
+        transform: rotate(-10deg) translate(-20px, 15px);
+    }
+
+    .--lab {
+        background: rgb(240, 200, 160);
+        border: 1px dotted rgb(20, 60, 80);
+        color: rgb(20, 60, 80);
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bolder;
+        padding: 4px 6px 2px;
+        position: absolute;
+        text-shadow: none;
+        transform: rotate(-10deg) translate(20px, -25px);
+        margin-left: 30px;
+    }
+
+    .vintage__container {
+        display: inline-block;
+        margin: 25px auto 40px;
+    }
+
+    .vintage {
+        font-family: 'Six Caps', sans-serif;
+        font-size: 192px;
+        letter-spacing: 10px;
+        line-height: 1;
+        margin: 0;
+        position: relative;
+    }
+
+    .vintage__top {
+        background: linear-gradient(rgb(240, 220, 200), rgb(230, 200, 160));
+        -webkit-background-clip: text;
+        background-clip: text;
+        position: absolute;
+        z-index: 1;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+    }
+
+    .vintage__bot {
+        text-shadow:
+            2px 1px rgb(85, 10, 0),
+            4px 2px rgb(90, 15, 5),
+            6px 4px rgb(100, 20, 15),
+            8px 5px rgb(105, 25, 20),
+            10px 6px rgb(110, 30, 25),
+            12px 7px rgb(115, 30, 30),
+            14px 8px rgb(120, 30, 35),
+            16px 9px black,
+            18px 10px black,
+            20px 11px black,
+            22px 12px black,
+            24px 13px black,
+            28px 14px rgba(0, 0, 0, 0.9),
+            30px 15px rgba(0, 0, 0, 0.7),
+            32px 16px rgba(0, 0, 0, 0.5),
+            34px 17px rgba(0, 0, 0, 0.3),
+            36px 18px rgba(0, 0, 0, 0.1),
+            40px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img class="leo" src="paintingsofleonardo/leo.jpg" alt="leo">
+            <h1 class="headleo">Leonardo Da Vinci</h1>
+            <p class="quotes">“Once you have tasted flight, you will forever walk the earth with your eyes turned
+                skyward, for there you have been,
+                and there you will always long to return.” ― Leonardo da Vinci</p>
+        </div>
+    </header>
+    <section class="agc">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#creator">Creator Info</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="about" class="bsection">
+        <h2>About Leonardo Da Vinci</h2>
+        <p>Leonardo da Vinci (1452–1519) was an Italian polymath of the Renaissance period. He was born in Vinci, Italy, and is
+            widely regarded as one of the greatest artists and thinkers of all time.</p>
+        
+        <h3>Artistic Career</h3>
+        <p>Leonardo is renowned for his masterpieces such as the Mona Lisa, The Last Supper, and the Vitruvian Man. His
+            innovative techniques and use of light and shadow revolutionized the art world.</p>
+        
+        <h3>Scientific Inventions</h3>
+        <p>Beyond his artistic endeavors, Leonardo was also a prolific inventor and scientist. He conceptualized flying
+            machines, war machines, and advanced anatomical studies.</p>
+        
+        <h3>Legacy</h3>
+        <p>Leonardo's legacy extends far beyond his lifetime. His work continues to inspire artists, scientists, and thinkers
+            around the globe, and his ideas have left an indelible mark on human history.</p>
+        
+        <h3>Quotes</h3>
+        <p>"Simplicity is the ultimate sophistication."</p>
+        <p>"Learning never exhausts the mind."</p>
+        <p>"The noblest pleasure is the joy of understanding."</p>
+        
+        <h3>Fun Facts</h3>
+        <ul>
+            <li>Leonardo was ambidextrous and could write with both hands simultaneously.</li>
+            <li>He was a vegetarian and had a deep reverence for all living creatures.</li>
+            <li>Leonardo kept detailed notebooks filled with sketches, scientific diagrams, and personal reflections.</li>
+        </ul>
+<section id="gallery">
+    <h2>Leonardo da Vinci's top 5 famous paintings</h2>
+    <div class="gallery">
+        <div class="painting">
+            <h3 class="painting-name">Mona Lisa</h3>
+            <p class="number">1.</p>
+            <img src="paintingsofleonardo/Mona-Lisa-oil-wood-panel-Leonardo-da (1).webp" alt="Mona Lisa">
+            <p class="descrip">The Mona Lisa is perhaps the most famous painting in the world. It depicts a woman with an enigmatic
+                expression, seated
+                against a backdrop of a distant landscape..</p>
+        </div>
+        <div class="painting">
+            <h3 class="painting-name">The Last Supper</h3>
+            <p class="number">2.</p>
+            <img src="paintingsofleonardo/painting2.jpg" alt="Mona Lisa">
+            <p class="descrip">This iconic mural depicts the moment Jesus announces that one of his disciples will betray him. It captures the
+            reactions of the disciples to this revelation.</p>
+        </div>
+        <div class="painting">
+            <h3 class="painting-name">The Vitruvian Man</h3>
+            <p class="number">3.</p>
+            <img src="paintingsofleonardo/painting3.jpg" alt="Mona Lisa">
+            <p class="descrip">This drawing is a study of the proportions of the human body, based on the writings of the Roman architect Vitruvius. It
+            is a symbol of the intersection between art, science, and philosophy.</p>
+        </div>
+        <div class="painting">
+            <h3 class="painting-name">Lady with an Ermine</h3>
+            <p class="number">4.</p>
+            <img src="paintingsofleonardo/p4.jpg" alt="Mona Lisa">
+            <p class="descrip"> This portrait features a young woman holding an ermine, a symbol of purity. It is known for its masterful depiction of the subject's facial expression and the delicate rendering of her clothing.</p>
+        </div>
+        <div class="painting">
+            <h3 class="painting-name">Annunciation</h3>
+            <p class="number">5.</p>
+            <img src="paintingsofleonardo/p5.jpg" alt="Mona Lisa">
+            <p class="descrip">This painting depicts the angel Gabriel announcing to the Virgin Mary that she will conceive and give birth to Jesus. It
+            showcases da Vinci's skill in capturing emotion and movement.</p>
+        </div>
+    </div>
+</section>
+<section id="creator" class="info">
+    <div class="halo"></div>
+<div>
+  <span class="intro --pre">PRELIM</span>
+  <span class="intro --lab">LABORATORY</span>
+  <span class="intro">EXAM</span>
+</div>
+<div class="vintage__container">
+  <p class="vintage vintage__top">FAN PAGE</p>
+  <p class="vintage vintage__bot">FAN PAGE</p>
+</div>
+
+<h2>Madoginog, Ruel C. <br>BSIT-1Y2-3 <br>WBDV111 <br>Mrs. Mary Joyce Del Mundo</h2>
+</section>
+
+   
+</body>
+
+</html>
